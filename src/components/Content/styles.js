@@ -7,67 +7,45 @@ export const Container = styled.section`
   padding: .5rem 1rem;
 `;
 
-export const Tabs = styled.div`
-  position: relative;
-  height: 360px;
-  max-width: 98%;
-  margin: 0 auto;
+Container.Wrapper = styled.div`
+  display: flex;
 
-  p {
-    margin: 0;
-    padding: 0;
+  div {
+    flex: 1;
+    margin: 0.5rem 0;
+    text-align: center;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      margin: 0.5rem 1rem;
+      padding: 0.5rem 0;
+      border-radius: 8px;
+      background-color: #49BBCC;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);    }
+
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+  }
+`;
+
+Container.Content = styled.div``;
+
+Container.Cards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  @media(max-width: 640px) {
+  grid-template-columns: repeat(2, 1fr);
   }
 
-  &::after {
-    content: '.';
-    display: block;
-    clear: both;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
-    visibility: none;
+  @media(max-width: 432px) {
+  grid-template-columns: 1fr;
   }
 `;
 
-Tabs.Header {
-  input {
-    display: none;
-  }
-
-}
-
-Tabs.Content = styled.div`
-
-  input + label + div {
-    width: 98%;
-    opacity: 0;
-    position: absolute;
-    background: #eee;
-    top: 40px;
-    left: 0;
-    height: 300px;
-    padding: 10px;
-    z-index: -1;
-    transition: opacity ease-in-out .3s;
-  }
-
-  input:checked + label + div {
-    opacity: 1;
-    z-index: 1000;
-  }
-
-  input + label {
-    line-height: 40px;
-    padding: 0 20px;
-    float: left;
-    background: #444;
-    color: #fff;
-    cursor: pointer;
-    transition: background ease-in-out .3s;
-  }
-
-  input:checked + label {
-      color: #000;
-      background: #eee;
-  }
-`;
+export default Container;
