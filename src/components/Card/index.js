@@ -1,30 +1,28 @@
 import PropTypes from 'prop-types';
 import {
-  Container, CardContent, CardHeader, CardImage,
+  Container, CardHeader, CardImage, CardAnimation,
 } from './styles';
 
 export default function Card({
-  title, overview, posterPath, name,
+  title, posterPath, name,
 }) {
   return (
-    <Container>
-      <CardHeader>
-        {title || name}
-        <hr />
-      </CardHeader>
-      <CardImage
-        style={{ backgroundImage: `url('${posterPath}')` }}
-      />
-      <CardContent>
-        {overview}
-      </CardContent>
-    </Container>
+    <CardAnimation>
+      <Container>
+        <CardHeader>
+          {title || name}
+          <hr />
+        </CardHeader>
+        <CardImage>
+          <img src={posterPath} alt="Cartaz do Filme" />
+        </CardImage>
+      </Container>
+    </CardAnimation>
   );
 }
 
 Card.propTypes = {
   title: PropTypes.string,
   name: PropTypes.string,
-  overview: PropTypes.string.isRequired,
   posterPath: PropTypes.string.isRequired,
 };

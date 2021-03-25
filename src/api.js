@@ -3,7 +3,7 @@ export const API_URL = 'http://localhost:3000';
 export function GET_DATA(type, page) {
   if (page) {
     return {
-      url: `${API_URL}/${type}?page${page}`,
+      url: `${API_URL}/${type}?page=${page}`,
       options: {
         method: 'GET',
       },

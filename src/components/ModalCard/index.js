@@ -20,15 +20,22 @@ export default function ModalCard({ cardId, type, setModalActive }) {
       <Modal>
         <Modal.Container>
           <Modal.Header imageURL={data.backdrop_path}>
-            <h3>{data.title}</h3>
+            <h3>{data.title || data.name}</h3>
           </Modal.Header>
           <Modal.Content>
-            <p>
-              Data de lançamento:
-              {' '}
-              {data.release_date}
-            </p>
-            <p>{data.overview}</p>
+            <div>
+              <p>
+                <strong>Data de lançamento:</strong>
+                {' '}
+                {data.release_date || data.first_air_date}
+              </p>
+              <span>
+                {data.vote_average}
+              </span>
+            </div>
+            <div>
+              <p>{data.overview}</p>
+            </div>
           </Modal.Content>
         </Modal.Container>
       </Modal>

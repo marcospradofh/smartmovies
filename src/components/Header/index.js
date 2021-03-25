@@ -10,9 +10,7 @@ export default function Header() {
             MOVIES
           </h1>
         </Logo>
-        <SearchBox>
-          <p>Barra de pesquisa</p>
-        </SearchBox>
+        <SearchBox />
       </div>
     </Container>
   );
