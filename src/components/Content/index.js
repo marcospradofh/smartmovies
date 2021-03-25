@@ -37,26 +37,24 @@ export default function Content() {
         </div>
       </Container.Wrapper>
       <Container.Content>
-        <Container.Cards>
-          {data.map((card) => (
-            <li
-              key={card.id}
-              onClick={(e) => {
-                setSelectedCard(card.id);
-                setModalActive(true);
-              }}
-            >
-              <Card
-                id={card.id}
-                title={card.title}
-                name={card.name}
-                overview={card.overview}
-                posterPath={card.poster_path}
-                voteAverage={card.vote_average}
-              />
-            </li>
-          ))}
-        </Container.Cards>
+        {data.map((card) => (
+          <div
+            key={card.id}
+            onClick={(e) => {
+              setSelectedCard(card.id);
+              setModalActive(true);
+            }}
+          >
+            <Card
+              id={card.id}
+              title={card.title}
+              name={card.name}
+              overview={card.overview}
+              posterPath={card.poster_path}
+              voteAverage={card.vote_average}
+            />
+          </div>
+        ))}
       </Container.Content>
     </Container>
   );

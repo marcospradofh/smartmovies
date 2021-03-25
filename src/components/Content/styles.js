@@ -32,20 +32,20 @@ Container.Wrapper = styled.div`
   }
 `;
 
-Container.Content = styled.div``;
+Container.Content = styled.div`
+  column-count: 3;
+
+@media(max-width: 640px) {
+column-count: 2;
+}
+
+@media(max-width: 432px) {
+column-count: 1;
+}
+`;
 
 Container.Cards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
 
-  @media(max-width: 640px) {
-  grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media(max-width: 432px) {
-  grid-template-columns: 1fr;
-  }
 `;
 
 export default Container;

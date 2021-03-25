@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  break-inside: avoid-column;
+  margin-bottom: 1rem;
   padding: 0.5rem;
   border-radius: 8px;
   background: #FFF;
@@ -14,6 +16,7 @@ export const CardHeader = styled.header`
   text-align: center;
   margin-top: 4px;
   margin-bottom: 8px;
+
   hr {
     margin-top: 8px;
     border: 0;
