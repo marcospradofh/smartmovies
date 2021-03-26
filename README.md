@@ -1,4 +1,4 @@
-<h1 align="center">smartMOVIES Front-End</h1>
+<h1 align="center">Projeto smartMOVIES</h1>
 
 ## Descrição do Projeto ##
 <p align="center">Projeto feito para consumir os dados da API SmartMovies.
