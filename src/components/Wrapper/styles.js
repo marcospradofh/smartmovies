@@ -34,6 +34,27 @@ export const Container = styled.section`
     font-size: 32px;
     margin: .5rem 0;
   }
+
+  a {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.4rem;
+    background: #22212C;
+    color: #FFF;
+    padding: 0.4rem .8rem;
+    box-sizing: border-box;
+    transition: 0.1s;
+    :hover,
+    :focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #368C99;
+    }
+  }
 `;
 
 export default Container;

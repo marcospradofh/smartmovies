@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { shade } from 'polished';
 
 const animeLeft = keyframes`
   to {
@@ -21,6 +22,11 @@ export const Container = styled.div`
   transform: translateX(-20px);
   animation: ${animeLeft} 1s forwards;
   cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: ${shade(0.1, '#E1F2FA')}
+  }
 `;
 
 export const CardHeader = styled.header`

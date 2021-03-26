@@ -33,6 +33,10 @@ export default function Grid() {
     getData(type, page);
   }, [type, page]);
 
+  useEffect(() => {
+    document.title = 'smartMOVIES';
+  }, []);
+
   return (
     <>
       <Wrapper>
@@ -43,12 +47,24 @@ export default function Grid() {
         <Container>
           {modalActive
       && <ModalCard cardId={selectedCard} type={type} setModalActive={setModalActive} />}
-          <Container.Wrapper>
+          <Container.Wrapper active={type}>
             <div>
-              <li onClick={(e) => setType('filmes')}>Filmes</li>
+              <li
+                className="movies"
+                onClick={(e) => setType('filmes')}
+              >
+                Filmes
+
+              </li>
             </div>
             <div>
-              <li onClick={(e) => setType('series')}>Séries</li>
+              <li
+                className="series"
+                onClick={(e) => setType('series')}
+              >
+                Séries
+
+              </li>
             </div>
           </Container.Wrapper>
           <Container.Navigation>

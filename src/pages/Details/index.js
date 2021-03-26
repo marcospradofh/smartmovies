@@ -1,10 +1,17 @@
 /* eslint-disable react/prop-types */
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Content, Wrapper } from '../../components';
 import { Cast, Information } from './styles';
 
 export default function Details({ location }) {
   const { data } = location.state;
   const { cast } = data.credits;
+
+  useEffect(() => {
+    document.title = `smartMOVIES | ${data.title || data.name}`;
+  }, []);
+
   return (
     <>
       <Wrapper
@@ -13,6 +20,9 @@ export default function Details({ location }) {
         colorWhite
       >
         <h1>{data.title || data.name}</h1>
+        <Link to="/">
+          Voltar para Home
+        </Link>
       </Wrapper>
       <Content>
         <Information>

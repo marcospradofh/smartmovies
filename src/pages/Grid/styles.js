@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.section`
   margin: 0 auto 32px;
@@ -15,6 +16,16 @@ Container.Wrapper = styled.div`
     margin: 0.5rem 0;
     text-align: center;
 
+    ${(props) => (props.active === 'filmes' ? css`
+      .movies {
+      box-shadow: 0 0 0 2px #22212C, 0 0 0 4px #FFF;
+      }
+    ` : css`
+      .series {
+      box-shadow: 0 0 0 2px #22212C, 0 0 0 4px #FFF;
+      }
+    `)}
+
     li {
       display: flex;
       flex-direction: column;
@@ -24,15 +35,17 @@ Container.Wrapper = styled.div`
       padding: 0.5rem 0;
       border-radius: 8px;
       background-color: #49BBCC;
-      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);    }
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
 
       font-weight: bold;
       font-size: 16px;
       cursor: pointer;
+      transition: 0.5s;
+
 
       :hover,
       :focus {
-        text-decoration: underline;
+        background: ${shade(0.2, '#49BBCC')}
       }
   }
 `;
@@ -89,13 +102,13 @@ Container.Navigation = styled.div`
 
       :hover,
       :focus {
-        outline: none;
         box-shadow: 0 0 0 3px #368C99, 0 0 0 4px #FFF;
       }
 
       :disabled {
         background: #E4E4E4;
         color: #A8A8A8;
+        box-shadow: none;
       }
     }
   }
