@@ -12,13 +12,13 @@ Tabela de conteúdos
    * [Tabela de Conteudo](#tabela-de-conteudo)
 
    * [Instalação](#instalacao) 🏤
-   1 - Clone o repositório: https://github.com/mpradofilho/smartmovies
-   2 - Execute o comando "yarn" ou "npm install"
-   Enjoy! ;)
+   		- Clone o repositório: https://github.com/mpradofilho/smartmovies. 
+   		- Execute o comando "yarn" ou "npm install". 
+   		- Enjoy! ;)
 
    * [Como usar](#como-usar) 👍
-  Depois de instalado, rode com "yarn start" ou "npm start".
-      * [Pre Requisitos](#pre-requisitos)
+  		- Depois de instalado, rode com "yarn start" ou "npm start".
+   * [Pre Requisitos](#pre-requisitos)
       - React, React DOM, React Icons
       - Styled Components
       - Polished
@@ -26,7 +26,7 @@ Tabela de conteúdos
       - History
 
    * [Tecnologias](#tecnologias)
-    - ReactJS
+     - ReactJS
 <!--te-->
 
 <h4 align="center">
