@@ -8,8 +8,7 @@ Tabela de conteúdos
 =================
 <!--ts-->
    * [Sobre](#Sobre) 👔
-   Front desenvolvido em React para consumir API SmartMovies.
-   * [Tabela de Conteudo](#tabela-de-conteudo)
+   <p>Front desenvolvido em React para consumir API SmartMovies.</p> 
 
    * [Instalação](#instalacao) 🏤
    		- Clone o repositório: https://github.com/mpradofilho/smartmovies. 
