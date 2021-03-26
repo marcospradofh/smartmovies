@@ -17,21 +17,10 @@ export const Container = styled.div`
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
   opacity: 0;
   transform: translateX(-20px);
   animation: ${animeLeft} 1s forwards;
-
-
-`;
-
-export const CardAnimation = styled.div`
-  transition: .2s;
-
-  :hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
+  cursor: pointer;
 `;
 
 export const CardHeader = styled.header`
@@ -45,7 +34,7 @@ export const CardHeader = styled.header`
     margin-top: 8px;
     border: 0;
     border-top: 1px solid #E0E0E0;
-    box-shadow: 0px 0px 12px 0px rgba(10,16,13,0.32);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.32);
   }
 `;
 
