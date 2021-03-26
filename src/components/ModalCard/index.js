@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { GET_DATA_ID } from '../../api';
 import { Modal } from './styles';
 
@@ -37,6 +38,15 @@ export default function ModalCard({ cardId, type, setModalActive }) {
               <p>{data.overview}</p>
             </div>
           </Modal.Content>
+          <Modal.Footer>
+            <Link to={{
+              pathname: `/${type}/details/${cardId}`,
+              state: { data },
+            }}
+            >
+              Mais informações
+            </Link>
+          </Modal.Footer>
         </Modal.Container>
       </Modal>
     </div>

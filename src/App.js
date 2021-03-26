@@ -1,12 +1,14 @@
-import { Content, Header, Wrapper } from './components';
+import { Router } from 'react-router-dom';
+import { Header } from './components';
+import Routes from './Routes';
+import history from './services/history';
 
 function App() {
   return (
-    <>
+    <Router history={history}>
       <Header />
-      <Wrapper />
-      <Content />
-    </>
+      <Routes />
+    </Router>
   );
 }
 

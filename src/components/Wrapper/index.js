@@ -1,10 +1,16 @@
-import { Container, Title } from './styles';
+/* eslint-disable react/prop-types */
+import { Container } from './styles';
 
-export default function Wrapper() {
+export default function Wrapper({
+  children, heightSize, backgroungURL, colorWhite,
+}) {
   return (
-    <Container>
-      <Title>Bem vindo ao smartMOVIES!</Title>
-      <p>Encontre os melhores filmes e séries disponiveis.</p>
+    <Container
+      heightSize={heightSize}
+      backgroungURL={backgroungURL}
+      colorWhite={colorWhite}
+    >
+      {children}
     </Container>
   );
 }
