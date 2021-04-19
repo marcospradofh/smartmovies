@@ -27,6 +27,7 @@ Tabela de conteúdos
    * [Tecnologias](#tecnologias)
      - ReactJS
 <!--te-->
+Link do projeto: https://smartmovies-mpradofilho.vercel.app/
 
 <h4 align="center">
 	 smartMOVIES 🚀
