@@ -8,12 +8,14 @@ import { Modal } from './styles';
 export default function ModalCard({ cardId, type, setModalActive }) {
   const [data, setData] = useState([]);
 
+  async function getData() {
+    const { url, options } = GET_DATA_ID(type, cardId);
+    const res = await fetch(url, options);
+    setData(await res.json());
+  }
+
   useEffect(() => {
-    (async function () {
-      const { url, options } = GET_DATA_ID(type, cardId);
-      const res = await fetch(url, options);
-      setData(await res.json());
-    }());
+    getData();
   }, [cardId]);
 
   return (
